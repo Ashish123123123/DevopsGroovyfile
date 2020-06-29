@@ -2,7 +2,7 @@ job("task6-job1") {
   description("This job will pull the github repo on every push, update the container using given Dockerfile and push image to DockerHub")
   
   scm {
-    github(Ashish123123123/task6devopsAL.git,'master')
+    github('Ashish123123123/task6devopsAL.git','master')
   }
   
   triggers {
