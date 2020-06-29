@@ -2,7 +2,7 @@ job("task6-job1") {
   description("This job will pull the github repo on every push, update the container using given Dockerfile and push image to DockerHub")
   
   scm {
-    github('devil-test/dockerfile-deploycodes','master')
+    github(Ashish123123123/task6devopsAL.git,'master')
   }
   
   triggers {
@@ -17,7 +17,7 @@ job("task6-job1") {
     dockerBuildAndPublish {
       repositoryName('ashish123123/httpd-server')
       tag("latest")
-      dockerHostURI('tcp://0.0.0.0:1234')
+      dockerHostURI('tcp://0.0.0.0:4243')
       registryCredentials('docker-hub')
       createFingerprints(false)
       skipDecorate(false)
